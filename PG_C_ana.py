@@ -8,9 +8,29 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle, Arc, Circle, Polygon
 
 # Configuration de la page
-st.set_page_config(page_title="TEKFIT Basketball Analytics", layout="wide", page_icon="🏀")
-st.title("📊 Tableau de bord NBA - TEKFIT Performance")
-st.subheader("Analyse des données biomécaniques et physiologiques des joueurs")
+st.set_page_config(page_title="TKFIT Basketball Analytics", layout="wide", page_icon="")
+# Appliquer les styles CSS personnalisés
+st.markdown(
+    """
+    <style>
+    /* Couleur de fond globale */
+    .stApp {
+        background-color: #000000;
+        color: #ffffff;
+    }
+    
+    /* Couleur de la sidebar */
+    [data-testid="stSidebar"] {
+        background-color: #ffc107 !important;
+    }
+    
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+st.title("Dashboard TKFIT Performance")
+st.subheader("Real-time analysis of biomechanical and physiological data")
 
 # Génération de données simulées pour les basketteurs
 def generate_player_data(position, has_breaks):
@@ -97,7 +117,7 @@ else:
     rest_periods = []
 
 # Métriques clés
-st.header("📈 Métriques de performance")
+st.header("📈 Performance metrics")
 col1, col2, col3, col4 = st.columns(4)
 
 avg_speed = selected_df['vitesse'].mean()
@@ -421,4 +441,4 @@ if st.sidebar.button("Télécharger données CSV"):
 
 
 # Pied de page
-st.caption("Données collectées par le système TEKFIT | © 2023 NBA Performance Analytics")
+st.caption("Données collectées par le boitier TKFIT | 2025 Basketball Analytics")
