@@ -104,7 +104,7 @@ guard_df = generate_player_data("Meneur", has_breaks=False)
 # Sidebar - Sélection du joueur
 st.sidebar.image("TKFIT LOGO.jpg")
 st.sidebar.header("Paramètres d'analyse")
-player_type = st.sidebar.radio("Sélection du Joueur", ("Pivot", "Meneur"))
+player_type = st.sidebar.radio("Sélection du Joueur", ("Pivot", "Meneur (Issokojo)"))
 selected_df = pivot_df if player_type == "Pivot" else guard_df
 
 # Calcul des périodes de repos
